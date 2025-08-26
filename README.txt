@@ -35,3 +35,27 @@
 
 -git pull origin main
 원격저장소에 있는 새로운커밋으로 업데이트 하기
+
+# 📌 Git Branch 옵션 정리
+
+`git branch` 명령어는 **브랜치 생성, 조회, 삭제, 이름 변경** 등에 사용됩니다.  
+아래는 자주 쓰는 옵션 모음입니다.  
+
+---
+
+## 🔑 주요 옵션
+
+| 옵션 | 설명 | 예시 |
+|------|------|------|
+| `-m` | 브랜치 이름 변경 | `git branch -m old_name new_name`<br>현재 브랜치를 바꿀 때 →<br> `git branch -m new_name` |
+| `-M` | 강제 이름 변경 (같은 이름이 이미 있어도 덮어씀) | `git branch -M new_name` |
+| `-d` | 브랜치 삭제 (병합된 경우만) | `git branch -d branch_name` |
+| `-D` | 브랜치 강제 삭제 (병합 안 되어도 삭제됨) | `git branch -D branch_name` |
+| `-a` | 모든 브랜치 보기 (로컬 + 원격) | `git branch -a` |
+| `-r` | 원격 브랜치만 보기 | `git branch -r` |
+| `--list` | 브랜치 목록 필터링 | `git branch --list "feature/*"` |
+| `-v` | 브랜치별 마지막 커밋 메시지 표시 | `git branch -v` |
+| `-vv` | 추적 중인 원격 브랜치 정보까지 표시 | `git branch -vv` |
+| `--set-upstream-to=<remote>/<branch>` | 현재 브랜치를 특정 원격 브랜치와 연결 | `git branch --set-upstream-to=origin/main` |
+
+---
